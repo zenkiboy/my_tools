@@ -15,6 +15,9 @@
 --
 -- Author: Luis Martin Gil http://www.luismartingil.com
 -- Year : 2013
+--
+-- Modified by Mickey Zhang zenkiboy@gmail.com 
+-- Year : 2014
 
 -- # python script for the color schema generation
 -- rgbs = [(0, 24, 92), (63, 29, 64), (84, 19, 41), (12, 100, 130), (64, 55, 56)]
