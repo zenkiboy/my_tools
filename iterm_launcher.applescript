@@ -65,7 +65,7 @@ activate
 	set myItem1 to myItem1 & {{color:myColor3dark, cmds:{"ssh -t core1 'sh init/tail.sh php.log'"}, name:"php.log", trans:"0", split:"h", before_split:""}}
 	set myItem1 to myItem1 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/tail.sh www-access.log'"}, name:"www-access.log", trans:"0", split:"v", before_split:""}}
 	set myItem1 to myItem1 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/tail.sh www-error.log'"}, name:"www-error.log", trans:"0", split:"v", before_split:"]"}}
-	set myItem1 to myItem1 & {{color:myColor3dark, cmds:{""}, name:"", trans:"0", before_split:"" }}
+	set myItem1 to myItem1 & {{color:myColor3dark, cmds:{"ssh -t core1 'sh mysqlconn'"}, name:"", trans:"0", before_split:"" }}
 
 	-- Second tab
 	set myItem2 to {}
@@ -76,8 +76,28 @@ activate
 	set myItem3 to {}
 	set myItem3 to myItem3 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/mysqlwatch3.sh'"}, name:"watch3", trans:"0", split:"h", before_split:""}}
 	set myItem3 to myItem3 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/mysqlwatch4.sh'"}, name:"watch4", trans:"0", split:"n/a", before_split:""}}
+
+	-- Forth tab
+	set myItem4 to {}
+	set myItem4 to myItem4 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/mysqlwatch5.sh'"}, name:"watch5", trans:"0", split:"h", before_split:""}}
+	set myItem4 to myItem4 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/mysqlwatch6.sh'"}, name:"watch6", trans:"0", split:"n/a", before_split:""}}
+
+	-- Fifth tab
+	set myItem5 to {}
+	set myItem5 to myItem5 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/mysqlwatch7.sh'"}, name:"watch7", trans:"0", split:"h", before_split:""}}
+	set myItem5 to myItem5 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/mysqlwatch8.sh'"}, name:"watch8", trans:"0", split:"n/a", before_split:""}}
+
+	-- Sixth tab
+	set myItem6 to {}
+	set myItem6 to myItem6 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/mysqlwatch9.sh'"}, name:"watch9", trans:"0", split:"h", before_split:""}}
+	set myItem6 to myItem6 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/mysqlwatch10.sh'"}, name:"watch10", trans:"0", split:"n/a", before_split:""}}
+
+	-- Seventh tab
+	set myItem7 to {}
+	set myItem7 to myItem7 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/mysqlwatch11.sh'"}, name:"watch11", trans:"0", split:"h", before_split:""}}
+	set myItem7 to myItem7 & {{color:myColor1dark, cmds:{"ssh -t core1 'sh init/mysqlwatch12.sh'"}, name:"watch12", trans:"0", split:"n/a", before_split:""}}
 	
-	set myTermWindow to {myItem1, myItem2, myItem3}
+	set myTermWindow to {myItem1, myItem2, myItem3, myItem4, myItem5, myItem6, myItem7}
 	
 	set myterm to (make new terminal)
 	
